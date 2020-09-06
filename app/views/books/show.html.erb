@@ -1,0 +1,11 @@
+<div class = "show">
+  <div class = "show-top">
+  <p><span class = "show-title">Title:</span> <%= @book.title %></p>
+  <p><span class = "show-body">Body:</span> <%= @book.body %></p>
+  </div>
+  
+  <div class = "link">
+  <%= link_to "Edit", books_edit_path, :style => "color: #464646" %> |
+  <%= link_to "Back", books_index_path, :style => "color: #464646" %>
+  </div>
+</div>

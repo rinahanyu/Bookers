@@ -1,0 +1,82 @@
+// Place all the styles related to the books controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+// トップページ
+.top-page {
+  color: #464646;
+}
+
+.top-header {
+  margin: 15px 20px 30px 20px;
+}
+
+.top-body {
+  padding-left: 60px;
+}
+
+.top-body p {
+  padding-bottom: 20px;
+}
+
+.title {
+  font-family: arial black;
+}
+
+
+// 一覧ページ
+.index {
+  color: #464646;
+  margin: 20px;
+}
+
+.index-top {
+  font-family: arial black;
+  margin: 0px;
+}
+
+table th {
+  padding: 10px;
+}
+
+table td {
+  padding: 10px;
+}
+
+.new {
+  color: #464646;
+  margin: 20px;
+}
+
+.new-top {
+  font-family: arial black;
+  padding-bottom: 10px;
+}
+
+
+// 詳細ページ
+.show {
+  color: #464646;
+  margin: 30px;
+}
+
+.show-top {
+  padding-left: 60px;
+}
+
+.show-title, .show-body {
+  font-family: arial black;
+}
+
+.show-top p {
+  padding-bottom: 30px;
+}
+
+.link {
+  padding: 15px;
+}
