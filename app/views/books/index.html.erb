@@ -19,13 +19,13 @@
         <td><%= book.title %></td>
         <td><%= book.body %></td>
         <td>
-          <%=link_to "Show", books_show_path(book.id), :style => "color: #464646" %>
+          <%=link_to "Show", book_path(book.id), :style => "color: #464646" %>
         </td>
         <td>
-          <%= link_to "Edit", books_edit_path(book.id), :style => "color: #464646" %>
+          <%= link_to "Edit", edit_book_path(book.id), :style => "color: #464646" %>
         </td>
         <td>
-          <%= link_to "Destroy", books_destroy_path(book.id), method: :delete, data:{confirm: "Are you sure？"}, :style => "color: #464646" %>
+          <%= link_to "Destroy", "/books/#{book.id}", method: :delete, data:{confirm: "Are you sure？"}, :style => "color: #464646" %>
         </td>
       </tr>
     <% end %>
@@ -51,7 +51,7 @@
     </div> 
   <% end %>
   
-  <%= form_with model: @book, url:'/books/create/', local:true do |f| %>
+  <%= form_with model: @book, url:'/books', local:true do |f| %>
  
   <h5>Title</h5>
   <%= f.text_field :title %>
