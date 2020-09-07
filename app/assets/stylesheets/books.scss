@@ -32,22 +32,23 @@
 // 一覧ページ
 .index {
   color: #464646;
-  margin: 20px;
+  margin: 40px;
 }
 
 .index-top {
   font-family: arial black;
-  margin: 0px;
+  margin-bottom: 10px;
 }
 
 table th {
-  padding: 10px;
+  padding: 5px;
 }
 
 table td {
-  padding: 10px;
+  padding: 5px;
 }
 
+// 新規投稿
 .new {
   color: #464646;
   margin: 20px;
@@ -58,7 +59,30 @@ table td {
   padding-bottom: 10px;
 }
 
+// エラーメッセージ
+.error {
+  width: 500px;
+  border: solid 2px red;
+  margin-bottom: 25px;
+}
 
+.error h5 {
+  color: white;
+  background-color: #CC3300;
+  font-family: arial black;
+  padding: 5px 15px;
+}
+
+.error ul {
+  padding: 30px 60px;
+  background-color: #EEEEEE;
+}
+
+.error li {
+  list-style-position: inside;
+  font-size: 13px;
+}
+  
 // 詳細ページ
 .show {
   color: #464646;
@@ -77,6 +101,32 @@ table td {
   padding-bottom: 30px;
 }
 
-.link {
-  padding: 15px;
+.show-link {
+  padding: 20px;
+}
+
+
+// 編集ページ
+.edit {
+  color: #464646;
+  margin: 30px;
+}
+
+.edit-top {
+  font-family: arial black;
+}
+
+.edit h5, .edit p {
+  padding-top: 15px;
+}
+
+.edit-link {
+  padding-top: 15px;
+}
+
+// サクセスメッセージ
+.notice {
+  color: green;
+  padding-left: 90px;
+  padding-top: 25px;
 }

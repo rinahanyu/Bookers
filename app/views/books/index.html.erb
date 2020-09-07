@@ -1,3 +1,9 @@
+<% if flash[:notice] %>
+  <div class = "notice">
+    <%= flash[:notice] %>
+  </div>
+<% end %>
+
 <div class ="index">
   <h1 class = "index-top">Books</h1>
  
@@ -13,9 +19,13 @@
         <td><%= book.title %></td>
         <td><%= book.body %></td>
         <td>
-          <%=link_to "Show", books_path(book.id), :style => "color: #464646" %>
-          <%= link_to "Edit", books_edit_path, :style => "color: #464646" %>
-          <%= link_to "Destroy", "/books/#{book.id}/", :style => "color: #464646" %>
+          <%=link_to "Show", books_show_path(book.id), :style => "color: #464646" %>
+        </td>
+        <td>
+          <%= link_to "Edit", books_edit_path(book.id), :style => "color: #464646" %>
+        </td>
+        <td>
+          <%= link_to "Destroy", books_destroy_path(book.id), method: :delete, data:{confirm: "Are you sure？"}, :style => "color: #464646" %>
         </td>
       </tr>
     <% end %>
@@ -26,6 +36,20 @@
   
 <div class ="new">
   <h2 class = "new-top">New book</h2>
+  
+  
+  <% if @book.errors.any? %>
+    <div class = "error">
+      <h5>
+        <%= @book.errors.count %> errors prohibited this book from being saved:
+      </h5>
+      <ul>
+      <% @book.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div> 
+  <% end %>
   
   <%= form_with model: @book, url:'/books/create/', local:true do |f| %>
  
