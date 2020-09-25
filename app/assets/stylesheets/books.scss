@@ -82,6 +82,11 @@ table td {
   list-style-position: inside;
   font-size: 13px;
 }
+
+.field_with_errors {
+  border: solid 2px red;
+  width: 165px;
+}
   
 // 詳細ページ
 .show {
@@ -131,7 +136,3 @@ table td {
   padding-top: 25px;
 }
 
-.field_with_errors {
-  border: solid 2px red;
-  width: 165px;
-}
